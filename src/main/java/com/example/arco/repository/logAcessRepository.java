@@ -1,5 +1,9 @@
 package com.example.arco.repository;
 
-public class logAcessRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.arco.model.LogAcess;
+
+public interface logAcessRepository extends JpaRepository<LogAcess, Long>{
     
 }
