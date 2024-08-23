@@ -12,7 +12,8 @@ import java.util.List;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
-public class conteudo {
+@Entity
+public class Conteudo {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
