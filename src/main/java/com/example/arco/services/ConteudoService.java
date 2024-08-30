@@ -15,12 +15,12 @@ public class ConteudoService {
     @Autowired
     private ConteudoRepository conteudoRepository;
 
-    // Método para salvar um novo conteúdo
+ 
     public Conteudo salvarConteudo(Conteudo conteudo) {
         return conteudoRepository.save(conteudo);
     }
 
-    // Método para atualizar um conteúdo existente
+   
     public Conteudo atualizarConteudo(Long id, Conteudo conteudoAtualizado) {
         Optional<Conteudo> conteudoExistente = conteudoRepository.findById(id);
         if (conteudoExistente.isPresent()) {
@@ -42,18 +42,17 @@ public class ConteudoService {
         }
     }
 
-    // Método para buscar um conteúdo por ID
+    
     public Conteudo buscarConteudoPorId(Long id) {
         return conteudoRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Conteúdo não encontrado com id: " + id));
     }
 
-    // Método para buscar todos os conteúdos
+
     public List<Conteudo> buscarTodosConteudos() {
         return conteudoRepository.findAll();
     }
 
-    // Método para deletar um conteúdo por ID
     public void deletarConteudo(Long id) {
         if (conteudoRepository.existsById(id)) {
             conteudoRepository.deleteById(id);
@@ -61,4 +60,6 @@ public class ConteudoService {
             throw new RuntimeException("Conteúdo não encontrado com id: " + id);
         }
     }
+
+    
 }

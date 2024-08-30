@@ -18,7 +18,7 @@ public class LogAcess {
 
     private LocalDateTime dataRealizacao;
 
-    // Construtores
+
     public LogAcess() {
     }
 
@@ -28,7 +28,6 @@ public class LogAcess {
         this.dataRealizacao = dataRealizacao;
     }
 
-    // Getters e setters
     public Long getId() {
         return id;
     }
